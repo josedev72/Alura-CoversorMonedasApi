@@ -116,7 +116,14 @@ public class Principal {
 
         String azul = "\u001B[34m";
         String quitarFormato = "\u001B[0m";
-        System.out.println(azul + "Cotización = " + cotiza + ", resultado = " + resultado + quitarFormato);
+
+        String resultadoFormateado = String.format("%s %,.2f; %s %,.2f",
+                "Cotización actual: ", cotiza,
+                "resultado =", resultado);
+        System.out.println(azul + resultadoFormateado + quitarFormato);
+
+
+
     }
 
     private static void menu() {
